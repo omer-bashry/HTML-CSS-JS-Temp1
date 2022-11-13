@@ -1,0 +1,78 @@
+:root{
+    --main-color : #ff5722;
+    --main-transition: 0.3s;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+/* Start landing Page */
+.landing-page{
+    min-height: 100vh;
+    background-image: url(../imgs/01.jpg);
+    background-size: cover;
+    position: relative;
+    transition: var(--main-transition);
+}
+.landing-page .over-lay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.landing-page .header{
+    position: relative;
+    color: #fff;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.landing-page  .header .logo{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.landing-page .header .logo span{
+    color: var(--main-color);
+}
+.landing-page .header .links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+}
+.landing-page .header .links li a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition: var(--main-transition);
+}
+.landing-page .header .links li a:hover,
+.landing-page .header .links li a.active{
+   color: var(--main-color); 
+}
+.landing-page .intro-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+}
+.landing-page .intro-text h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.landing-page .intro-text h1 span{
+    color: var(--main-color);
+}
+.landing-page .intro-text p{
+    line-height: 1.8;
+    font-size: 20px;
+}
+/* End landing Page */
