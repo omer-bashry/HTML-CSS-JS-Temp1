@@ -1,78 +1,139 @@
-:root{
-    --main-color : #ff5722;
-    --main-transition: 0.3s;
+:root {
+  --main-color: #ff9800;
+  --main-transition: 0.3s;
 }
-body{
-    font-family: 'Open Sans', sans-serif;
+body {
+  font-family: "Open Sans", sans-serif;
 }
+/* Start Settins Box */
+.settings-box {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  z-index: 1000;
+  width: 200px;
+  height: 100vh;
+  background-color: #fff;
+  transition: var(--main-transition);
+}
+.settings-box.open {
+  left: 0;
+}
+.settings-box .toggel-box {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.settings-box .toggel-box .fa-gear {
+  padding: 10px;
+}
+.settings-box .option-box {
+  padding: 20px;
+}
+.settings-box .option-box h4 {
+  color: #666;
+}
+.settings-box .option-box .color-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.settings-box .option-box .color-list li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.settings-box .option-box .color-list li.active {
+  border: 1px solid #ccc;
+}
+.settings-box .option-box .color-list li:first-child {
+  background-color: #ff9800;
+}
+.settings-box .option-box .color-list li:nth-child(2) {
+  background-color: #009688;
+}
+.settings-box .option-box .color-list li:nth-child(3) {
+  background-color: #e91e63;
+}
+.settings-box .option-box .color-list li:nth-child(4) {
+  background-color: #03a9f4;
+}
+.settings-box .option-box .color-list li:nth-child(5) {
+  background-color: #4caf50;
+}
+/* End Settins Box */
 /* Start landing Page */
-.landing-page{
-    min-height: 100vh;
-    background-image: url(../imgs/01.jpg);
-    background-size: cover;
-    position: relative;
-    transition: var(--main-transition);
+.landing-page {
+  min-height: 100vh;
+  background-image: url(../imgs/01.jpg);
+  background-size: cover;
+  position: relative;
+  transition: var(--main-transition);
 }
-.landing-page .over-lay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, .6);
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+.landing-page .over-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
-.landing-page .header{
-    position: relative;
-    color: #fff;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.landing-page .header {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.landing-page  .header .logo{
-    font-size: 20px;
-    font-weight: bold;
-    padding-left: 20px;
+.landing-page .header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 20px;
 }
-.landing-page .header .logo span{
-    color: var(--main-color);
+.landing-page .header .logo span {
+  color: var(--main-color);
 }
-.landing-page .header .links{
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding-right: 20px;
-    font-size: 16px;
+.landing-page .header .links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  font-size: 16px;
 }
-.landing-page .header .links li a{
-    cursor: pointer;
-    text-decoration: none;
-    color: #fff;
-    transition: var(--main-transition);
+.landing-page .header .links li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  transition: var(--main-transition);
 }
 .landing-page .header .links li a:hover,
-.landing-page .header .links li a.active{
-   color: var(--main-color); 
+.landing-page .header .links li a.active {
+  color: var(--main-color);
 }
-.landing-page .intro-text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: #fff;
-    z-index: 2;
-    text-align: center;
+.landing-page .intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  text-align: center;
 }
-.landing-page .intro-text h1{
-    font-size: 40px;
-    font-weight: bold;
+.landing-page .intro-text h1 {
+  font-size: 40px;
+  font-weight: bold;
 }
-.landing-page .intro-text h1 span{
-    color: var(--main-color);
+.landing-page .intro-text h1 span {
+  color: var(--main-color);
 }
-.landing-page .intro-text p{
-    line-height: 1.8;
-    font-size: 20px;
+.landing-page .intro-text p {
+  line-height: 1.8;
+  font-size: 20px;
 }
 /* End landing Page */
