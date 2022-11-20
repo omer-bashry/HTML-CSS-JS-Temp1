@@ -19,6 +19,13 @@ document.querySelector(".toggel-box .fa-gear").onclick = function () {
 };
 
 // Switching Colors
+let main_color = localStorage.getItem("color_option");
+if (main_color !== null) {
+  document.documentElement.style.setProperty(
+    "--main-color",
+    localStorage.getItem("color_option")
+  );
+}
 const coloelst = document.querySelectorAll(".color-list li");
 coloelst.forEach((li) => {
   li.addEventListener("click", (e) => {
@@ -26,5 +33,13 @@ coloelst.forEach((li) => {
       "--main-color",
       e.target.dataset.color
     );
+    localStorage.setItem("color_option", e.target.dataset.color);
+    e.target.parentElement.querySelectorAll(".active").forEach((element) => {
+      element.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    document
+      .querySelector(`[data-color= ${window.localStorage.getItem("color")}]`)
+      .classList.add("active");
   });
 });
