@@ -30,10 +30,14 @@ body {
   padding: 10px;
 }
 .settings-box .option-box {
-  padding: 20px;
+  padding: 1px;
+  background-color: #eee;
+  text-align: center;
+  margin: 15px;
 }
 .settings-box .option-box h4 {
   color: #666;
+  font-size: 13px;
 }
 .settings-box .option-box .color-list {
   list-style: none;
@@ -65,6 +69,25 @@ body {
 .settings-box .option-box .color-list li:nth-child(5) {
   background-color: #4caf50;
 }
+/*start random-backcround */
+.settings-box .random-backgrounds .yes,
+.settings-box .random-backgrounds .no {
+  display: inline-block;
+  width: 50px;
+  background-color: var(--main-color);
+  margin-bottom: 15px;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.settings-box .random-backgrounds span.active {
+  opacity: 1;
+}
+/* end random-backcround */
 /* End Settins Box */
 /* Start landing Page */
 .landing-page {
