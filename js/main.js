@@ -2,9 +2,7 @@
 let landingPage = document.querySelector(".landing-page");
 // Create Array Of Imgs
 let imgsArr = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
-// create varuable to controle intervel
-let backgrounddOption = true;
-let intervelControler;
+
 //create function to change backgroumd
 function randomizeImg() {
   if (backgrounddOption === true) {
@@ -14,7 +12,30 @@ function randomizeImg() {
         let random = Math.floor(Math.random() * imgsArr.length);
         //Change To The Curent Img
         landingPage.style.backgroundImage = `url("imgs/${imgsArr[random]}")`;
-      }, 3000);
+      }, 1000);
+  }
+}
+// create varuable to controle intervel
+let backgrounddOption = true;
+let intervelControler;
+//backgruond local storge variable
+let backcroundLocalItem = localStorage.getItem("random_option");
+// check if local storge empty
+if (backcroundLocalItem !== null) {
+  if (backcroundLocalItem === "true") {
+    backgrounddOption = true;
+    console.log("true");
+  } else {
+    backgrounddOption = false;
+    console.log("false");
+  }
+  document.querySelectorAll(".random-backgrounds span").forEach((element) => {
+    element.classList.remove("active");
+  });
+  if (backcroundLocalItem === "true") {
+    document.querySelector(".random-backgrounds .yes").classList.add("active");
+  } else {
+    document.querySelector(".random-backgrounds .no").classList.add("active");
   }
 }
 randomizeImg();
@@ -74,9 +95,11 @@ randomeBackEle.forEach((span) => {
     if (e.target.dataset.background === "yes") {
       backgrounddOption === true;
       randomizeImg();
+      localStorage.setItem("random_option", true);
     } else {
       backgrounddOption === false;
       clearInterval(intervelControler);
+      localStorage.setItem("random_option", false);
     }
   });
 });

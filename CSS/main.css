@@ -5,6 +5,12 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+.contener {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
 /* Start Settins Box */
 .settings-box {
   position: fixed;
@@ -160,3 +166,35 @@ body {
   font-size: 20px;
 }
 /* End landing Page */
+/* start about-us */
+.about-us {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-us .info-box {
+  flex: 1;
+  padding: 0 20px;
+}
+.about-us .info-box h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+.about-us .info-box p {
+  line-height: 1.8;
+  color: #777;
+  margin: 0;
+}
+.about-us .img-box {
+  flex: 1;
+  text-align: center;
+}
+.about-us .img-box img {
+  width: 250px;
+}
+
+/* end about-us */
