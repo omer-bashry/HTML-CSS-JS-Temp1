@@ -29,6 +29,7 @@ if (backcroundLocalItem !== null) {
     backgrounddOption = false;
     console.log("false");
   }
+
   document.querySelectorAll(".random-backgrounds span").forEach((element) => {
     element.classList.remove("active");
   });
