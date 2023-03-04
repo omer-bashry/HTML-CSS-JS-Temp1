@@ -12,7 +12,7 @@ function randomizeImg() {
         let random = Math.floor(Math.random() * imgsArr.length);
         //Change To The Curent Img
         landingPage.style.backgroundImage = `url("imgs/${imgsArr[random]}")`;
-      }, 3000);
+      }, 5000);
   }
 }
 // create varuable to controle intervel
