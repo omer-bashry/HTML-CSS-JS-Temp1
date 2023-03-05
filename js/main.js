@@ -27,7 +27,7 @@ if (backcroundLocalItem !== null) {
     console.log("true");
   } else {
     backgrounddOption = false;
-    console.log("false");
+    // console.log("false");
   }
 
   document.querySelectorAll(".random-backgrounds span").forEach((element) => {
@@ -104,5 +104,28 @@ randomeBackEle.forEach((span) => {
     }
   });
 });
-
 // end random-backcround
+
+//  inimation for my skills
+let ourSkills = document.querySelector(".skills");
+
+window.onscroll = function () {
+  // skills offset hright
+  let skillOfSetTop = ourSkills.offsetTop;
+  // skills height
+  let skillsOuterHeight = ourSkills.offsetHeight;
+  // window height
+  let windowHeight = this.innerHeight;
+  // windo scrollTop
+  let windowScrollTop = this.pageYOffset;
+  // reatch to section
+  if (windowScrollTop > skillOfSetTop + skillsOuterHeight - windowHeight) {
+    let allSkills = document.querySelectorAll(
+      ".skill-box .skill-prosses span "
+    );
+    // debugger;
+    allSkills.forEach((skill) => {
+      skill.style.width = skill.dataset.progress;
+    });
+  }
+};
