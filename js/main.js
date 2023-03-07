@@ -129,3 +129,46 @@ window.onscroll = function () {
     });
   }
 };
+
+// create gallery pupup
+
+let galleryImgs = document.querySelectorAll(".gallery img");
+galleryImgs.forEach((img) => {
+  img.addEventListener("click", (e) => {
+    //create overlay div
+    let overlayPopup = document.createElement("div");
+    overlayPopup.className = "pupupOverlay";
+    document.body.appendChild(overlayPopup);
+    //create img div
+    let popupImgDiv = document.createElement("div");
+    popupImgDiv.className = "popupImgDiv";
+    // creat img heder
+    if (img.alt != null) {
+      let popupHead = document.createElement("h3");
+      let popupHedText = document.createTextNode(img.alt);
+      popupHead.appendChild(popupHedText);
+      popupImgDiv.appendChild(popupHead);
+    }
+
+    // create pupup img
+    let popupimg = document.createElement("img");
+    popupimg.src = img.src;
+    popupImgDiv.appendChild(popupimg);
+    document.body.appendChild(popupImgDiv);
+
+    //create img exit button
+    let exitSpan = document.createElement("span");
+    let exitSpanText = document.createTextNode("X");
+    exitSpan.appendChild(exitSpanText);
+    exitSpan.className = "exit-bytton";
+    popupImgDiv.appendChild(exitSpan);
+  });
+});
+
+// close the popup window
+document.addEventListener("click", (e) => {
+  if (e.target.className == "exit-bytton") {
+    e.target.parentNode.remove();
+    document.querySelector(".pupupOverlay").remove();
+  }
+});
