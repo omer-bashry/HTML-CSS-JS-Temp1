@@ -420,6 +420,7 @@ body {
   justify-content: center;
   gap: 10px;
 }
+
 .features .featuer-box {
   width: calc((100% / 3) - 20px);
   text-align: center;
