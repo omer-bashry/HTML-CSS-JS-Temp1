@@ -402,3 +402,49 @@ body {
   width: 0;
 }
 /* end timeline */
+/* start our features */
+.features {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.features h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin: 0 0 50px;
+  text-align: center;
+}
+.features .contener {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.features .featuer-box {
+  width: calc((100% / 3) - 20px);
+  text-align: center;
+}
+.features .featuer-box img {
+  width: 100px;
+}
+.features .featuer-box h4 {
+  font-weight: bold;
+  position: relative;
+}
+.features .featuer-box h4::before {
+  content: "";
+  width: 40px;
+  height: 3px;
+  position: absolute;
+  background-color: var(--main-color);
+  left: 50%;
+  margin-left: -20px;
+  bottom: -15px;
+}
+.features .featuer-box p {
+  color: #777;
+  line-height: 1.8;
+  margin-top: 50px;
+}
+/* end our features */
