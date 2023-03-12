@@ -253,7 +253,7 @@ body {
   text-align: center;
 }
 .gallery .img-box img {
-  width: 200px;
+  width: 300px;
   padding: 3px;
   background-color: #f6f6f6;
   border: 1px solid #ccc;
@@ -422,8 +422,11 @@ body {
 }
 
 .features .featuer-box {
-  width: calc((100% / 3) - 20px);
+  width: calc((100% / 3) - 80px);
   text-align: center;
+  background-color: #f6f6f6;
+  padding: 30px;
+  border-radius: 6px;
 }
 .features .featuer-box img {
   width: 100px;
@@ -448,3 +451,74 @@ body {
   margin-top: 50px;
 }
 /* end our features */
+/* start testimonials */
+.testimonials {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+.testimonials::before {
+  content: "";
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+}
+.testimonials::after {
+  content: "";
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #666;
+}
+.testimonials .contener {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.testimonials h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 50px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+.testimonials .test-box {
+  width: calc((100% / 3) - 60px);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+.testimonials .test-box > p {
+  color: #777;
+  line-height: 1.8;
+  font-style: italic;
+}
+.testimonials .test-box .coment {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.testimonials .test-box .coment img {
+  border-radius: 50%;
+}
+.testimonials .test-box .coment .text h4 {
+  margin: 0 0 10px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.testimonials .test-box .coment .text p {
+  margin: 0;
+  color: #777;
+  font-style: italic;
+  font-size: 11px;
+}
+/* end testimonials */
