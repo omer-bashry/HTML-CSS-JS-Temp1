@@ -113,6 +113,8 @@ body {
   border-radius: 50%;
   margin-bottom: 5px;
   position: relative;
+  cursor: pointer;
+  transition: 0.3s;
 }
 .nav-bullet .bullet .bullet-tool {
   background-color: var(--main-color);
@@ -124,6 +126,13 @@ body {
   color: #fff;
   font-size: 12px;
   top: -5px;
+  text-align: center;
+  display: none;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.nav-bullet .bullet:hover .bullet-tool {
+  display: block;
 }
 .nav-bullet .bullet .bullet-tool::before {
   content: "";
@@ -132,7 +141,8 @@ body {
   border-color: transparent transparent transparent var(--main-color);
   position: absolute;
   right: -15px;
-  top: 2px;
+  top: 50%;
+  transform: translateY(-50%);
   height: 0px;
   width: 0px;
 }

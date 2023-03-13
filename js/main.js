@@ -172,3 +172,13 @@ document.addEventListener("click", (e) => {
     document.querySelector(".pupupOverlay").remove();
   }
 });
+
+// nav-bullet
+let bullets = document.querySelectorAll(".nav-bullet .bullet");
+bullets.forEach((bullet) => {
+  bullet.addEventListener("click", (e) => {
+    document.querySelector(e.target.dataset.section).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
